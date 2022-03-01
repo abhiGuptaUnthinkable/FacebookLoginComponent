@@ -110,6 +110,23 @@
     width: auto;
     font-weight: normal;
 }
+@media (max-width:700px) {
+     .row{
+         display: block;
+         top:40%
+     }
+     .col-logo{
+         text-align: center;
+         margin-bottom: 20px;
+     }
+     .col-form{
+       margin-left: 50%;
+       transform: translate(-50%);
+     }
+     .col-form .p{
+         text-align: start;
+     }
+}
 .login-disabled{
     background-color: #ccc !important;
 }
