@@ -110,3 +110,6 @@
     width: auto;
     font-weight: normal;
 }
+.login-disabled{
+    background-color: #ccc !important;
+}

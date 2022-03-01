@@ -26,7 +26,7 @@ export const Signup = () =>{
     }
 
     const onSubmit = () =>{
-       if( validateFormState()){
+       if( validateFormState() && formState.email){
            console.log(formState)
        }
     }
@@ -43,7 +43,7 @@ export const Signup = () =>{
       <div className="form-container">
           <TextInput id="email" name="email" type="text" placeholder="Email address or phone number" onChange={changeFormState} value={formState.email} error={formState.emailError} />
           <TextInput id="password" name="password" type="password" placeholder="Password" onChange={changeFormState} value={formState.password}/>
-          <button className="btn-login cursor-pointer" onClick={onSubmit}>Login</button>
+          <button className={`btn-login cursor-pointer ${formState.email?'':'login-disabled '}`} onClick={onSubmit}>Login</button>
           <a href="#">Forgotten password?</a>
           <button className="btn-new">Create new Account</button>
       </div>
