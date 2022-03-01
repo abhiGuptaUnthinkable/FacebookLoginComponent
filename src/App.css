@@ -1,0 +1,8 @@
+.cursor-pointer{
+    cursor: pointer;
+}
+.invalid-feedback {
+	color: red;
+	font-size: 0.75rem;
+    text-align: start;
+}
