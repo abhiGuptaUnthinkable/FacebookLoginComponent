@@ -27,8 +27,8 @@ export const TextInput: React.SFC<Props> = props => {
 
 
 	return (
-			<div>
-			   <input id={props.id} name={props.name} type={props.type} placeholder={props.placeholder} onChange={handleChange}/>
+			<div className="form-group">
+			   <input id={props.id} className="form-control" name={props.name} type={props.type} placeholder={props.placeholder} onChange={handleChange}/>
 				{props.error && <div className="invalid-feedback">{props.error}</div>}
 			</div>
 	);

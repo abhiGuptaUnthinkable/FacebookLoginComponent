@@ -1,8 +1,27 @@
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer;
 }
+
 .invalid-feedback {
-	color: red;
-	font-size: 0.75rem;
+    color: red;
+    font-size: 0.75rem;
     text-align: start;
+}
+
+@font-face {
+    font-family: 'SF-Pro-Display-Regular';
+    src: url('fonts/SF-Pro-Display-Regular.woff') format('woff'),
+        url('fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
+        url('fonts/SF-Pro-Display-Regular.eot'),
+        url('fonts/SF-Pro-Display-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/SF-Pro-Display-Regular.otf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+
+    font-family: Helvetica, Arial, sans-serif;
 }
