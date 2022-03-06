@@ -43,9 +43,14 @@ export const Signup = () =>{
       <div className="form-container">
           <TextInput id="email" name="email" type="text" placeholder="Email address or phone number" onChange={changeFormState} value={formState.email} error={formState.emailError} />
           <TextInput id="password" name="password" type="password" placeholder="Password" onChange={changeFormState} value={formState.password}/>
-          <button className={`btn-login cursor-pointer ${formState.email?'':'login-disabled '}`} onClick={onSubmit}>Login</button>
+          <button className={`btn-login cursor-pointer ${formState.email?'':'login-disabled '}`} onClick={onSubmit}>Log in</button>
           <a href="#">Forgotten password?</a>
-          <button className="btn-new">Create new Account</button>
+          <div className="separator-or-wrap">
+          <div className="separator-or">
+              or
+          </div>
+          </div>
+          <button className="btn-new" type="button">Create New Account</button>
       </div>
       <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
   </div>

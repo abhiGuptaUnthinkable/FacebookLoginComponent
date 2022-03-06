@@ -1,24 +1,46 @@
-.row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    max-width: 1000px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+* {
+    box-sizing: border-box;
 }
 
-.col-logo {
-    flex: 0 0 50%;
-    text-align: left;
+.container {
+    max-width: 1010px;
+    padding: 0 15px;
+    margin: auto;
 }
 
-.col-form {
-    flex: 0 0 40%;
-    text-align: center;
+@media screen and (min-width: 992px) {
+    .new-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    .fb-logo {
+        padding-bottom: 10px;
+        padding-top: 112px;
+    }
+
+    .col-logo {
+        flex: 0 0 59%;
+        padding-right: 32px;
+        max-width: 500px;
+    }
+
+    .col-form {
+        flex: 0 0 41%;
+        text-align: center;
+    }
+
+    .user-page {
+        padding: 92px 0 112px;
+    }
+
+
 }
+
+
+
 
 .col-form .form-container {
     background-color: #ffffff;
@@ -26,14 +48,15 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 10px 16px 24px;
     max-width: 400px;
+    margin-top: 40px;
 }
 
 .col-form .form-container input, .col-form .form-container .btn-login {
     width: 100%;
     margin: 5px 0;
-    height: 45px;
+    height: 52px;
     vertical-align: middle;
     font-size: 16px;
 }
@@ -41,8 +64,15 @@
 .col-form .form-container input {
     border: 1px solid #dddfe2;
     color: #1d2129;
-    padding: 0 8px;
     outline: none;
+    font-size: 17px;
+    padding: 14px 16px;
+    height: 52px;
+    line-height: 16px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 364px;
+    border-radius: 6px;
 }
 
 .col-form .form-container input:focus {
@@ -58,6 +88,11 @@
     padding: 0 16px;
     color: #ffffff;
     font-weight: 700;
+    text-transform: capitalize;
+}
+
+.col-form .form-container .btn-login:hover {
+    background-color: #166fe5;
 }
 
 .col-form .form-container a {
@@ -83,6 +118,15 @@
     color: #ffffff;
     font-weight: 700;
     margin-top: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.col-form .form-container .btn-new:hover {
+
+    background-color: #36a420;
+    border-color: #36a420;
+
 }
 
 .col-form p {
@@ -100,33 +144,172 @@
 }
 
 .col-logo img {
-   height: 106px;
-   margin: -28px; 
+    height: 106px;
+    margin: -28px;
 }
-.col-logo h2{
-   font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    line-height: 28px;
+
+.col-logo h2 {
+    font-family: 'SF-Pro-Display-Regular', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
     width: auto;
     font-weight: normal;
 }
-@media (max-width:700px) {
-     .row{
-         display: block;
-         top:40%
-     }
-     .col-logo{
-         text-align: center;
-         margin-bottom: 20px;
-     }
-     .col-form{
-       margin-left: 50%;
-       transform: translate(-50%);
-     }
-     .col-form .p{
-         text-align: start;
-     }
-}
-.login-disabled{
+
+
+.login-disabled {
     background-color: #ccc !important;
+}
+
+
+.form-control {
+    background: #FFFFFF url('../../images/shadow.png') repeat-x;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    padding: 14px 16px;
+    height: 22px;
+    line-height: 16px;
+    padding: 0 8px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 364px;
+    border-radius: 6px;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999;
+}
+
+.separator-or-wrap {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    body{
+        background: #fff;
+    }
+    .col-form .form-container{
+        background: transparent none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .col-form .form-container input{
+        padding: 12px;
+        height: 42px;
+        font-size: 14px;
+        background: #f5f6f7;
+    }
+    input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f5f6f7 inset !important;
+}
+
+    .fb-logo {
+        padding-top: 8px;
+        text-align: center;
+    }
+
+    .fb-logo img {
+        max-width: 112px;
+    }
+
+    .col-logo img {
+        margin: -72px auto
+    }
+
+    .col-logo h2 {
+        display: none;
+    }
+
+    .container {
+        max-width: 446px;
+    }
+
+    .col-form .form-container {
+        text-align: center;
+    }
+
+    .col-form p {
+        text-align: center;
+    }
+
+    .separator-or-wrap {
+        overflow: hidden;
+        display: block;
+        margin-top: 8px;
+    }
+
+    .separator-or {
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .separator-or:before {
+        margin-right: 15px;
+        right: 100%;
+    }
+
+    .separator-or:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+    .separator-or:before,
+    .separator-or:after {
+        content: "";
+        background: #ccd0d5;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+
+    }
+
+    .col-form .form-container a {
+        padding: 10px 0;
+        border: 0 none
+    }
+    .col-form .form-container input{
+        border-radius: 4px;
+    }
+    .col-form .form-container input, .col-form .form-container .btn-login{
+        height: 40px;
+        padding: 12px;
+        font-size: 16px;
+    }
+    .col-form .form-container .btn-new{
+        line-height: 40px;
+        font-size: 14px;
+    }
 }
